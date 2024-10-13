@@ -10,29 +10,29 @@ namespace SaborResenha.Models
 
         [Required]
         [StringLength(100)]
-        public string Nome { get; set; }
+        public required string Nome { get; set; }
 
         [Required]
         [Phone]
-        public string Telefone { get; set; }
+        public required string Telefone { get; set; }
 
         [Required]
         public Categoria Categoria { get; set; }
 
         [Required]
-        public string HorarioFuncionamento { get; set; }
+        public required string HorarioFuncionamento { get; set; }
 
-        public string Instagram { get; set; }
+        public string? Instagram { get; set; }
 
         [Required]
-        public string Cep { get; set; }
+        public required string Cep { get; set; }
 
-        public string Complemento { get; set; }
+        public string? Complemento { get; set; }
 
         [Required]
         public int Numero { get; set; }
         
         [Required]
-        public string Descricao { get; set; }
+        public required string Descricao { get; set; }
     }
 }

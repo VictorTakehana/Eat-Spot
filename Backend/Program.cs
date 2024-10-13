@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using SaborResenha.Data;
-using SaborResenha.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 

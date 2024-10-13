@@ -1,3 +1,6 @@
 # Ignore bin and obj folders
 bin/
 obj/
+*.db
+*.db-wal
+*.db-shm
