@@ -1,0 +1,82 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back_ios" />
+
+<div class="content">
+    <div class="title">
+        <div class="voltar" (click)="getVoltar()">
+            <span class="material-symbols-outlined bt-voltar">
+                arrow_back_ios
+            </span>
+        </div>
+        <h2>Cadastrar estabelecimento</h2>
+    </div>
+    <div class="grid-form">
+        <form [formGroup]="form">
+            <div class="grid-input" id="first-form">
+                <div class="form">
+                    <label>Nome do estabelecimento<span class="required"> *</span></label>
+                    <input type="text" placeholder="Ex: Bar do João" required />
+                </div>
+    
+                <div class="form">
+                    <label>Telefone para contato<span class="required"> *</span></label>
+                    <input type="text" placeholder="(XX) XXXXX-XXXX" required (input)="formatarTelefone($event)"/>
+                </div>
+    
+                <div class="form">
+                    <label>Categoria<span class="required"> *</span></label>
+                    <select name="" id="" required>
+                        <option value="" disabled selected>Ex: Bar, restaurante, pub</option>
+                        <option value="1">Bar</option>
+                        <option value="2">Restaurante</option>
+                        <option value="3">Pub</option>
+                        <option value="4">Cafeteria</option>
+                        <option value="5">Lanchonete</option>
+                        <option value="6">Outros</option>
+                    </select>
+                </div>
+            </div>
+            <div class="grid-input" id="second-form">
+                <div class="form">
+                    <label>Horário de funcionamento<span class="required"> *</span></label>
+                    <input type="text" placeholder="Ex: Seg a Sex, 18h às 23h" required />
+                </div>
+                <div class="form">
+                    <label>Instagram</label>
+                    <input type="text" placeholder="@nomedoestabelecimento" />
+                </div>
+            </div>
+            <div class="grid-input" id="thrid-form">
+                <div class="form">
+                    <label>CEP<span class="required"> *</span></label>
+                    <input type="text" placeholder="0000-000" required formControlName="cep" (blur)="buscarCep()" (input)="formatarCep($event)" />
+                </div>
+                <div class="form">
+                    <label>Endereço</label>
+                    <input type="text" formControlName="endereco"/>
+                </div>
+            </div>
+            <div class="grid-input" id="fourth-form">
+                <div class="form">
+                    <label>Número<span class="required"> *</span></label>
+                    <input type="text" placeholder="Número do local" required />
+                </div>
+                <div class="form">
+                    <label>Complemento</label>
+                    <input type="text" placeholder="Ex: Apartamento, sala" />
+                </div>
+                <div class="form">
+                    <label>Cidade</label>
+                    <input type="text" formControlName="cidade"/>
+                </div>
+            </div>
+            <div class="grid-input">
+                <label for="">Descrição<span class="required"> *</span></label>
+                <textarea type="text" placeholder="Descreva o ambiente e especialidades"></textarea>
+            </div>
+        </form>
+    </div>
+    <div class="button">
+        <button type="submit" class="bt-cadastrar">Cadastrar</button>
+    </div>
+</div>

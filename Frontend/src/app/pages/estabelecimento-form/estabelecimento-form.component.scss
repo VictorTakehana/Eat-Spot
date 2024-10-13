@@ -1,0 +1,110 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.grid-input {
+    display: grid;
+    column-gap: 24px;
+}
+
+.required {
+    color: red;
+}
+
+#first-form,
+#fourth-form {
+    grid-template-columns: 514px auto auto;
+}
+
+#second-form,
+#thrid-form {
+    grid-template-columns: 748px auto;
+
+}
+
+.grid-form {
+    padding: 0 200px;
+}
+
+select,
+input,
+textarea {
+    height: 30px;
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+select {
+    height: 40px;
+}
+
+input,
+textarea {
+    padding: 3px;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: 0 auto;
+}
+
+.voltar {
+    font-size: 21px;
+    margin-left: 90px;
+    z-index: 1;
+}
+
+.bt-voltar {
+
+    cursor: pointer;
+}
+
+label {
+    font-weight: 600;
+}
+
+textarea {
+    height: 95px !important;
+    resize: none;
+}
+
+textarea::placeholder,
+input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.button {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.bt-cadastrar {
+    height: 40px;
+    width: 25%;
+    border-radius: 29px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+
+input:disabled {
+    background-color: #EBEBEB;
+}
